@@ -1,0 +1,40 @@
+.contenedorForm{
+    border: 8px solid #F4E2A5;
+    /* border-radius: var(--borderRadius); */
+    border-radius: 15px;
+    padding: 20px; 
+    width: 75vw;   
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: var(--ocre); */
+    /* background-color: #F4E2A5; */
+    margin-top: 15px;
+    
+}
+.form{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.clickeable {
+    margin: 20px 5px;
+    cursor: pointer;
+    /* background-color: var(--ocre); */
+    background-color: #F4E2A5;
+    border: 0;
+    padding: 5px;
+}
+span{
+    font-size: 0.6em;
+}
+
+input, select{
+    border: 1px solid;
+    border-radius: 5px;
+}

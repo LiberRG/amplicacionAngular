@@ -1,0 +1,26 @@
+.contenedorHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.style{
+    width: 16vw;
+    height: 0px;
+    border-left: 35px solid transparent;
+    /* border-top: 35px solid var(--verdeClaro); */
+    border-top: 35px solid #C2EBCA;
+    animation: pruebaColor 10s infinite;
+
+}
+.imagen{
+    height: 35px;
+}
+
+@keyframes pruebaColor{
+    0% {border-top-color: #F4E2A5; }
+    25% {border-top-color: #fcd0d0; }
+    50%{border-top-color: #C2EBCA; } 
+    75%{border-top-color: #fcd0d0; } 
+    100%{border-top-color: #F4E2A5; }
+}

@@ -1,0 +1,27 @@
+
+.style{
+    width: 69vw;
+    height: 0px;
+    border-right: 35px solid transparent;
+    /* border-top: 35px solid var(--verdeClaro); */
+    border-bottom: 35px solid #C2EBCA;
+    animation: pruebaColor 10s infinite;
+}
+.icons{
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    width: 130px;
+}
+.imagen{
+    height: 25px;
+}
+
+@keyframes pruebaColor{
+    0% {border-bottom-color: #F4E2A5; }
+    25% {border-bottom-color: #fcd0d0; }
+    50%{border-bottom-color: #C2EBCA; } 
+    75%{border-bottom-color: #fcd0d0; } 
+    100%{border-bottom-color: #F4E2A5; }
+}
