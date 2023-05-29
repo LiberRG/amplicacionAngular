@@ -1,0 +1,8 @@
+<div class="comic">
+    <h1>{{titulo}}</h1>
+    <div class="historia">
+        <div *ngFor="let txt of texto">
+            <app-escena [path]="ruta" [text]="txt" [name]="name" position="txt.keys()"></app-escena>
+        </div>
+    </div>
+</div>

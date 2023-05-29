@@ -1,0 +1,9 @@
+.comic{
+    text-align: center;
+}
+.historia{
+    display: flex;
+}
+.historia div{
+    height: 100%;
+}

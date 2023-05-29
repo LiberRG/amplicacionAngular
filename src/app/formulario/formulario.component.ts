@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
+
+  datos: NgForm[] = [];
+  @Output() datosArray: EventEmitter<Array<NgForm>> = new EventEmitter();
+
+
+  onSubmit(f: NgForm) {
+    this.datos = f.value;
+
+    // @Output('datos') = this.datos;
+    this.datosArray.emit( f.value );
+    console.log("datos Array", this.datos);  
+  }
+
 
 }

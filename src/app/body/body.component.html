@@ -1,2 +1,28 @@
 <h2>Bienvenido a <i>{{nombreWeb}}</i> donde podrás crear tu propia historia.</h2>
-<app-formulario class="form"></app-formulario>
+<div class="contenedorForm">
+  <h3>Vamos con unas preguntas para comenzar: </h3>
+  <form [formGroup]="formResponse" class="formulario" (ngSubmit)="onSubmit()">
+    <div class="form">
+      <label for="name">¿Nombre del protagonista?*</label>
+      <input type="text" name="name" id="name" formControlName="name" required />
+    </div>
+    <div class="form">
+      <label for="category">¿Sobre que quieres que trate tu historia?*</label>
+      <select name="category" id="category" formControlName="category">
+        <option value="animales" selected>Animales</option>
+        <option value="frutas">Frutas</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+    <input id="iniciar" class="clickeable" type="submit" value="Iniciar Historia" />
+  </form>
+  <span>Nota: los campos con * son obligatorios</span>
+</div>
+
+<div *ngIf="hasData">
+  <app-comic [data]="arrDatos"></app-comic>
+  <!--<div *ngFor="let data of arrDatos">
+    <p>{{data}}</p>-->
+    <!-- <app-comic [categorias]=arrDatos['category'] [name]=arrDatos['name']></app-comic> -->
+  <!--</div>-->
+</div>

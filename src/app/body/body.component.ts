@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, NgForm, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-body',
@@ -6,9 +8,45 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
+
   public nombreWeb: string;
-  constructor(){
-    this.nombreWeb = "FABULAS"
+  arrDatos: Array<String> = [];
+  hasData: boolean = false;
+
+  formResponse: FormGroup;
+
+
+  recibiRespuesta: any;
+
+  constructor(private fb: FormBuilder) {
+
+    this.nombreWeb = "FABULAS";
+
+    this. formResponse = this.fb.group({
+      name: new FormControl([this.arrDatos[0]], Validators.required),
+      category: new FormControl([this.arrDatos[1]], Validators.required)
+    });
+
   }
+
+  getArrDatos() {
+    console.log(this.arrDatos);
+    return this.arrDatos;
+  }
+
+  getHasData() {
+    console.log(this.hasData);
+    return this.hasData;
+  }
+
+  onSubmit() {
+    let data = this.formResponse.value;
+    if(data.name != undefined && data.category != undefined){
+      this.arrDatos.push(data.name);
+      this.arrDatos.push(data.category);
+      this.hasData = true;
+    }
+  }
+
 
 }
