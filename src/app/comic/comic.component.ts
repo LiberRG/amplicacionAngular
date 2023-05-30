@@ -11,16 +11,41 @@ export class ComicComponent implements OnInit {
   name: String = "";
   titulo: String = "";
   ruta: String = "";
-  texto:Array<String> = [];
-  comic: object = {"ruta": "", "texto": [] };
+  texto: Array<String> = [];
+  comic: object = { "ruta": "", "texto": [] };
 
   // @Input('categorias') categorias:string;
   // @Input('name') name:string;
 
   COMICS = {
-    "animales": { "titulo": "Mi gato {{name}}", "ruta": "./assets/comic/animales/", "texto": ["Os voy a presentar a mi gato {{name}}.\n Es un  gato muy juguetón \n pero se asusta hasta de un ratón", "A {{name}} le encanta beber del agua frecas del grifo del lavadero \n porque es todo un aventurero", "Pero sobretoto es le gusta dormir acurrucado \n mientras leo a su lado "]},
-    "frutas": { "titulo": "{{name}} y las frutas de temporada", "ruta": "./assets/comic/frutas/", "texto": ["1","2","3"] },
-    "otros": { "titulo": "El descubrimiennto de {{name}} y Lola", "ruta": "./assets/comic/otros/", "texto": ["1","2","3"] }
+    "animales": {
+      "titulo": "Mi gato {{name}}",
+      "ruta": "./assets/comic/animales/",
+      "texto": [
+        "Os voy a presentar a mi gato {{name}}.\nEs un  gato muy juguetón \npero se asusta hasta de un ratón.",
+        "A {{name}} le encanta beber del agua frecas \ndirectamente del grifo del lavadero \nporque es todo un aventurero.",
+        "Pero sobretodo durante las tardes de invierno \na {{name}} le gusta mucho dormir acurrucado \nmientras leo tranquila a su lado."
+      ]
+    },
+
+    "frutas": {
+      "titulo": "{{name}} y las frutas de temporada", "ruta": "./assets/comic/frutas/",
+      "texto": [
+        "A {{name}} le encantan las frutas y verduras y suele comprar las que estan de temporada.\nLas frutas de verano tienen tonos rojo. \nLas frutas de de VERANO son: las sandias, las fresas o los melocotones entre otros.",
+        "Las frutas de otoños tiene colores amarillos o ocres.\nLas frutas y verduras de de OTOÑO son: las naranjas, las zanahorias o los frutos secos entre otros.",
+        "Las frutas de invierno se mueven entre los azules y los verdes.\nLas frutas y verduras de de INVIERNO son: las berenjena, los kiwis, los aguacates o el brécol secos entre otros."
+      ]
+    },
+
+    "otros": {
+      "titulo": "El descubrimiento de {{name}} y Zala", 
+      "ruta": "./assets/comic/otros/",
+      "texto": [
+        "{{name}} y su amiga Zala pasean por una de las montañas del planeta ZN15.\nCuando de la nada se encuentran con una nave abandonada.",
+        "{{name}} nota un movimiento junto a la nave y Zala le hace entusiasmada señala a un pequeño hombrecito. \nEl piloto esta triste porque su increible aventura se ha acabado por el accidente.", 
+        "Pero {{name}} tiene una idea y junto a Zala reunen a todos sus amigos.\nEl hombrecito les cuenta las historias de sus viajes mientras todos escuchas interesados."
+      ]
+    }
   };
 
   constructor() {
@@ -40,18 +65,18 @@ export class ComicComponent implements OnInit {
     switch (this.data[1]) {
       case "animales":
         this.titulo = this.COMICS.animales.titulo.replace("{{name}}", nombre);
-        this.ruta =  this.COMICS.animales.ruta
-        this.texto =  this.COMICS.animales.texto
+        this.ruta = this.COMICS.animales.ruta
+        this.texto = this.COMICS.animales.texto
         break;
       case "frutas":
         this.titulo = this.COMICS.frutas.titulo.replace("{{name}}", nombre);
-        this.ruta =  this.COMICS.frutas.ruta
-        this.texto =  this.COMICS.frutas.texto
+        this.ruta = this.COMICS.frutas.ruta
+        this.texto = this.COMICS.frutas.texto
         break;
       case "otros":
         this.titulo = this.COMICS.otros.titulo.replace("{{name}}", nombre);
-        this.ruta =  this.COMICS.otros.ruta
-        this.texto =  this.COMICS.otros.texto
+        this.ruta = this.COMICS.otros.ruta
+        this.texto = this.COMICS.otros.texto
         break;
     }
 

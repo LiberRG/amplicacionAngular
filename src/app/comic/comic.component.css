@@ -7,3 +7,8 @@
 .historia div{
     height: 100%;
 }
+h1{
+    font-family: 'Handlee', cursive;
+    border-bottom: 8px solid #F4E2A5;
+    font-weight: lighter;
+}
