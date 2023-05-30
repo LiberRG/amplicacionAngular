@@ -22,18 +22,18 @@ export class ComicComponent implements OnInit {
       "titulo": "Mi gato {{name}}",
       "ruta": "./assets/comic/animales/",
       "texto": [
-        "Os voy a presentar a mi gato {{name}}.\nEs un  gato muy juguetón \npero se asusta hasta de un ratón.",
-        "A {{name}} le encanta beber del agua frecas \ndirectamente del grifo del lavadero \nporque es todo un aventurero.",
-        "Pero sobretodo durante las tardes de invierno \na {{name}} le gusta mucho dormir acurrucado \nmientras leo tranquila a su lado."
+        "Os voy a presentar a mi gato {{name}}.Es un  gato muy juguetón pero se asusta hasta de un ratón.",
+        "A {{name}} le encanta beber del agua frecas directamente del grifo del lavadero porque es todo un aventurero.",
+        "Pero sobretodo durante las tardes de invierno a {{name}} le gusta mucho dormir acurrucado mientras leo tranquila a su lado."
       ]
     },
 
     "frutas": {
       "titulo": "{{name}} y las frutas de temporada", "ruta": "./assets/comic/frutas/",
       "texto": [
-        "A {{name}} le encantan las frutas y verduras y suele comprar las que estan de temporada.\nLas frutas de verano tienen tonos rojo. \nLas frutas de de VERANO son: las sandias, las fresas o los melocotones entre otros.",
-        "Las frutas de otoños tiene colores amarillos o ocres.\nLas frutas y verduras de de OTOÑO son: las naranjas, las zanahorias o los frutos secos entre otros.",
-        "Las frutas de invierno se mueven entre los azules y los verdes.\nLas frutas y verduras de de INVIERNO son: las berenjena, los kiwis, los aguacates o el brécol secos entre otros."
+        "A {{name}} le encantan las frutas y verduras y suele comprar las que estan de temporada. Las frutas de verano tienen tonos rojo. Las frutas de de VERANO son: las sandias, las fresas o los melocotones entre otros.",
+        "Las frutas de otoños tiene colores amarillos o ocres. Las frutas y verduras de de OTOÑO son: las naranjas, las zanahorias o los frutos secos entre otros.",
+        "Las frutas de invierno se mueven entre los azules y los verdes. Las frutas y verduras de de INVIERNO son: las berenjena, los kiwis, los aguacates o el brécol secos entre otros."
       ]
     },
 
@@ -41,9 +41,9 @@ export class ComicComponent implements OnInit {
       "titulo": "El descubrimiento de {{name}} y Zala", 
       "ruta": "./assets/comic/otro/",
       "texto": [
-        "{{name}} y su amiga Zala pasean por una de las montañas del planeta ZN15.\nCuando de la nada se encuentran con una nave abandonada.",
-        "{{name}} nota un movimiento junto a la nave y Zala le hace entusiasmada señala a un pequeño hombrecito. \nEl piloto esta triste porque su increible aventura se ha acabado por el accidente.", 
-        "Pero {{name}} tiene una idea y junto a Zala reunen a todos sus amigos.\nEl hombrecito les cuenta las historias de sus viajes mientras todos escuchas interesados."
+        "{{name}} y su amiga Zala pasean por una de las montañas del planeta ZN15. Cuando de la nada se encuentran con una nave abandonada.",
+        "{{name}} nota un movimiento junto a la nave y Zala entusiasmada señala a un pequeño hombrecito. El piloto esta triste porque su increible aventura se ha acabado por el accidente.", 
+        "Pero {{name}} tiene una idea, y junto a Zala reunen a todos sus amigos. El hombrecito les cuenta las historias de sus viajes mientras todos escuchas interesados."
       ]
     }
   };
