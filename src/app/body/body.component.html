@@ -4,7 +4,7 @@
   <form [formGroup]="formResponse" class="formulario" (ngSubmit)="onSubmit()">
     <div class="form">
       <label for="name">¿Nombre del protagonista?*</label>
-      <input type="text" name="name" id="name" formControlName="name" required />
+      <input type="text" name="name" id="name" formControlName="name" required/>
     </div>
     <div class="form">
       <label for="category">¿Sobre que quieres que trate tu historia?*</label>
@@ -21,8 +21,7 @@
 
 <div *ngIf="hasData">
   <app-comic [data]="arrDatos"></app-comic>
-  <!--<div *ngFor="let data of arrDatos">
-    <p>{{data}}</p>-->
-    <!-- <app-comic [categorias]=arrDatos['category'] [name]=arrDatos['name']></app-comic> -->
-  <!--</div>-->
+  <form [formGroup]="formResponse" class="formulario" (ngSubmit)="reiniciar()">
+    <input id="reiniciar" class="clickeable" type="submit" value="Generar otra historia" />
+  </form>
 </div>

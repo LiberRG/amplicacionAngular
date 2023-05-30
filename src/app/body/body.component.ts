@@ -23,8 +23,8 @@ export class BodyComponent {
     this.nombreWeb = "FABULAS";
 
     this. formResponse = this.fb.group({
-      name: new FormControl([this.arrDatos[0]], Validators.required),
-      category: new FormControl([this.arrDatos[1]], Validators.required)
+      name: new FormControl([this.arrDatos[0]]),
+      category: new FormControl([this.arrDatos[1]])
     });
 
   }
@@ -41,12 +41,15 @@ export class BodyComponent {
 
   onSubmit() {
     let data = this.formResponse.value;
-    if(data.name != undefined && data.category != undefined){
+    if(data.name != "" && data.category != ""){
       this.arrDatos.push(data.name);
       this.arrDatos.push(data.category);
       this.hasData = true;
     }
   }
 
+  reiniciar(){
+    location.reload();
+  }
 
 }
