@@ -37,9 +37,9 @@ export class ComicComponent implements OnInit {
       ]
     },
 
-    "otros": {
+    "otro": {
       "titulo": "El descubrimiento de {{name}} y Zala", 
-      "ruta": "./assets/comic/otros/",
+      "ruta": "./assets/comic/otro/",
       "texto": [
         "{{name}} y su amiga Zala pasean por una de las montañas del planeta ZN15.\nCuando de la nada se encuentran con una nave abandonada.",
         "{{name}} nota un movimiento junto a la nave y Zala le hace entusiasmada señala a un pequeño hombrecito. \nEl piloto esta triste porque su increible aventura se ha acabado por el accidente.", 
@@ -73,10 +73,10 @@ export class ComicComponent implements OnInit {
         this.ruta = this.COMICS.frutas.ruta
         this.texto = this.COMICS.frutas.texto
         break;
-      case "otros":
-        this.titulo = this.COMICS.otros.titulo.replace("{{name}}", nombre);
-        this.ruta = this.COMICS.otros.ruta
-        this.texto = this.COMICS.otros.texto
+      case "otro":
+        this.titulo = this.COMICS.otro.titulo.replace("{{name}}", nombre);
+        this.ruta = this.COMICS.otro.ruta
+        this.texto = this.COMICS.otro.texto
         break;
     }
 
